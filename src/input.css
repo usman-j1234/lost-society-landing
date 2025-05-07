@@ -1,0 +1,11 @@
+/* src/input.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* — Optional: your own additions below — */
+
+/* Example: a “.btn” utility */
+.btn {
+  @apply px-6 py-2 rounded-full font-semibold uppercase tracking-wide;
+}

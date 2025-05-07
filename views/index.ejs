@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost Society</title>
+
+  <!-- Tailwind CSS -->
+  <link href="/css/styles.css" rel="stylesheet">
+  <!-- Ancient Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Cinzel', serif; }
+    /* Egyptian Palette */
+    .text-primary { color: #d4af37; }
+    .bg-dark { background-color: #003b5c; }
+    .bg-sand { background-color: #f1e9d2; }
+    .border-contrast { border-color: #b5895b; }
+    .section-offset { padding-top: 4rem; }
+  </style>
+</head>
+<body class="bg-fixed bg-cover bg-center" style="background-image: url('/assets/textures/parchment.jpg')">
+  <!-- Sticky Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-dark bg-opacity-90">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+      <a href="#hero" class="text-2xl md:text-3xl font-bold text-primary">Lost Society</a>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="#features" class="text-primary hover:text-sand font-medium">Features</a>
+        <a href="#gallery" class="text-primary hover:text-sand font-medium">Gallery</a>
+        <a href="#download" class="px-4 py-2 border-2 border-contrast text-primary hover:bg-contrast rounded-full font-medium">Enter Now</a>
+      </div>
+      <!-- Mobile Hamburger -->
+      <button id="nav-toggle" class="md:hidden text-primary focus:outline-none">
+        <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-dark bg-opacity-95">
+      <div class="flex flex-col space-y-4 px-6 py-4">
+        <a href="#features" class="text-primary hover:text-sand font-medium">Features</a>
+        <a href="#gallery" class="text-primary hover:text-sand font-medium">Gallery</a>
+        <a href="#download" class="px-4 py-2 border-2 border-contrast text-primary hover:bg-contrast rounded-full font-medium">Enter Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="relative flex flex-col items-center justify-center text-center h-screen section-offset" data-aos="fade">
+    <div class="absolute inset-0 bg-dark bg-opacity-70"></div>
+    <div class="relative z-10 px-6">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-primary mb-4">Unlock the Lost Society</h1>
+      <p class="text-xl md:text-2xl text-primary mb-6">An ancient puzzle world shrouded in mystery.</p>
+      <a href="#download" class="px-8 py-3 border-2 border-primary text-primary hover:bg-contrast hover:text-dark rounded-full">Begin Your Quest</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-6 md:px-20 bg-sand bg-opacity-90 section-offset" data-aos="fade">
+    <h2 class="text-4xl font-bold text-center text-dark mb-12">Ancient Riddles</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-sand p-6 rounded-lg border-2 border-contrast">
+        <h3 class="text-2xl font-semibold text-dark mb-2">Glyph Deciphering</h3>
+        <p class="text-dark">Translate mysterious symbols to reveal hidden lore.</p>
+      </div>
+      <div class="bg-sand p-6 rounded-lg border-2 border-contrast">
+        <h3 class="text-2xl font-semibold text-dark mb-2">Puzzle Chambers</h3>
+        <p class="text-dark">Navigate intricate rooms filled with mechanical wonders.</p>
+      </div>
+      <div class="bg-sand p-6 rounded-lg border-2 border-contrast">
+        <h3 class="text-2xl font-semibold text-dark mb-2">Echoes of the Past</h3>
+        <p class="text-dark">Unearth memories of a civilization long forgotten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-20 px-6 md:px-20 section-offset" data-aos="fade">
+    <h2 class="text-4xl font-bold text-center text-primary mb-12">Ancient Vaults</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="/assets/screenshots/shot1.png" alt="Vault 1" class="rounded-lg border-2 border-contrast">
+      <img src="/assets/screenshots/shot3.png" alt="Vault 2" class="rounded-lg border-2 border-contrast">
+    </div>
+  </section>
+
+  <!-- Call to Action / Email Signup -->
+  <section id="download" class="flex flex-col justify-center items-center py-20 mb-16 bg-dark bg-opacity-80" data-aos="fade">
+    <div class="max-w-7xl mx-auto text-center px-6 md:px-20">
+      <h2 class="text-2xl font-bold text-primary mb-6">Ready to unravel secrets?</h2>
+      <form class="flex flex-col justify-center items-center gap-4">
+        <!-- Name Fields -->
+        <div class="flex flex-row justify-center items-center gap-4">
+          <input
+            type="text"
+            placeholder="First name"
+            required
+            class="w-24 px-3 py-1 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:border-primary"
+          />
+          <input
+            type="text"
+            placeholder="Last name"
+            required
+            class="w-24 px-3 py-1 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:border-primary"
+          />
+        </div>
+        <!-- Email Field -->
+        <div>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            class="w-48 px-3 py-1 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:border-primary"
+          />
+        </div>
+        <!-- Submit Button -->
+        <div>
+          <button
+            type="submit"
+            class="px-6 py-2 border-2 border-contrast bg-transparent text-primary font-medium rounded-full hover:bg-contrast hover:text-dark transition-opacity duration-200"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Minimum PC Requirements -->
+  <section id="requirements" class="flex flex-col justify-center items-center py-20 mb-16 bg-sand bg-opacity-90" data-aos="fade">
+    <div class="max-w-7xl mx-auto text-center px-6 md:px-20">
+      <h2 class="text-3xl font-bold text-dark mb-6">Minimum PC Requirements</h2>
+      <div class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast inline-block text-left">
+        <ul class="space-y-3">
+          <li><strong>Operating System:</strong> Windows 10 (64-bit)</li>
+          <li><strong>Processor:</strong> Intel Core i5-2500K or AMD FX-6300</li>
+          <li><strong>Memory:</strong> 8 GB RAM</li>
+          <li><strong>Graphics:</strong> NVIDIA GeForce GTX 760 or AMD Radeon R9 280</li>
+          <li><strong>Storage:</strong> 20 GB available space</li>
+          <li><strong>DirectX:</strong> Version 11</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center bg-dark bg-opacity-90 section-offset">
+    <p class="text-primary mb-4">&copy; <%= new Date().getFullYear() %> Lost Society Studios. All rights reserved.</p>
+    <div class="flex justify-center space-x-6 mb-8">
+      <a href="https://facebook.com" class="text-primary hover:text-sand text-2xl"><i class='bx bxl-facebook-circle'></i></a>
+      <a href="https://twitter.com" class="text-primary hover:text-sand text-2xl"><i class='bx bxl-twitter'></i></a>
+      <a href="https://instagram.com" class="text-primary hover:text-sand text-2xl"><i class='bx bxl-instagram'></i></a>
+      <a href="https://discord.com" class="text-primary hover:text-sand text-2xl"><i class='bx bxl-discord'></i></a>
+    </div>
+    <div>
+      <a href="#" class="mx-2 text-primary hover:text-sand">Privacy Policy</a> |
+      <a href="#" class="mx-2 text-primary hover:text-sand">Terms of Service</a>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Boxicons JS (Optional for Web Component Usage) -->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Toggle mobile menu
+      const toggle = document.getElementById('nav-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+      AOS.init({ duration: 500, once: true, disable: 'mobile' });
+    });
+  </script>
+</body>
+</html>
