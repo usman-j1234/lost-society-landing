@@ -15,7 +15,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
   <style>
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
     body { font-family: 'Cinzel', serif; }
     /* Egyptian Palette */
     .text-primary { color: #d4af37; }
@@ -23,6 +23,14 @@
     .bg-sand { background-color: #f1e9d2; }
     .border-contrast { border-color: #b5895b; }
     .section-offset { padding-top: 4rem; }
+    .rounded-full {
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      will-change: transform;
+    }
+  .rounded-full:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
   </style>
 </head>
 <body class="bg-fixed bg-cover bg-center" style="background-image: url('/assets/textures/parchment.jpg')">
@@ -64,7 +72,7 @@
   </section>
 
   <!-- Features -->
-  <section id="features" class="py-20 px-6 md:px-20 bg-sand bg-opacity-90 section-offset" data-aos="fade">
+  <section id="features" class="scroll-mt-16 py-20 px-6 md:px-20 bg-sand bg-opacity-90 section-offset" data-aos="fade">
     <h2 class="text-4xl font-bold text-center text-dark mb-12">Ancient Riddles</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="bg-sand p-6 rounded-lg border-2 border-contrast">
@@ -83,7 +91,7 @@
   </section>
 
   <!-- Gallery -->
-  <section id="gallery" class="py-20 px-6 md:px-20 section-offset" data-aos="fade">
+  <section id="gallery" class="scroll-mt-16 py-20 px-6 md:px-20 section-offset" data-aos="fade">
     <h2 class="text-4xl font-bold text-center text-primary mb-12">Ancient Vaults</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <img src="/assets/screenshots/shot1.png" alt="Vault 1" class="rounded-lg border-2 border-contrast">
@@ -92,53 +100,56 @@
   </section>
 
   <!-- Call to Action / Email Signup -->
-  <section id="download" class="flex flex-col justify-center items-center py-20 mb-16 bg-dark bg-opacity-80" data-aos="fade">
-    <div class="max-w-7xl mx-auto text-center px-6 md:px-20">
-      <h2 class="text-2xl font-bold text-primary mb-6">Ready to unravel secrets?</h2>
-      <form class="flex flex-col justify-center items-center gap-4">
-        <!-- Name Fields -->
-        <div class="flex flex-row justify-center items-center gap-4">
-          <input
-            type="text"
-            placeholder="First name"
-            required
-            class="w-24 px-3 py-1 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:border-primary"
-          />
-          <input
-            type="text"
-            placeholder="Last name"
-            required
-            class="w-24 px-3 py-1 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:border-primary"
-          />
-        </div>
+  <section
+    id="download"
+    class="bg-dark bg-opacity-80 text-center py-20 px-6"
+    data-aos="fade"
+  >
+    <div class="max-w-lg mx-auto">
+      <h2 class="text-2xl font-bold text-primary mb-6">
+        Ready to unravel secrets?
+      </h2>
+      <form class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <!-- First & Last Name -->
+        <input
+          type="text"
+          placeholder="First name"
+          required
+          class="w-full sm:w-1/2 px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"
+        />
+        <input
+          type="text"
+          placeholder="Last name"
+          required
+          class="w-full sm:w-1/2 px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"
+        />
         <!-- Email Field -->
-        <div>
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            class="w-48 px-3 py-1 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:border-primary"
-          />
-        </div>
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          class="w-full px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"
+        />
         <!-- Submit Button -->
-        <div>
-          <button
-            type="submit"
-            class="px-6 py-2 border-2 border-contrast bg-transparent text-primary font-medium rounded-full hover:bg-contrast hover:text-dark transition-opacity duration-200"
-          >
-            Sign Up
-          </button>
-        </div>
+        <button
+          type="submit"
+          class="self-center px-6 py-2 bg-transparent text-primary font-medium rounded-full border-2 border-contrast hover:bg-contrast hover:text-dark transition-all duration-300"
+        >
+          Sign Up
+        </button>
       </form>
     </div>
   </section>
 
-  <!-- Minimum PC Requirements -->
-  <section id="requirements" class="flex flex-col justify-center items-center py-20 mb-16 bg-sand bg-opacity-90" data-aos="fade">
-    <div class="max-w-7xl mx-auto text-center px-6 md:px-20">
+  <section
+    id="requirements"
+    class="bg-sand bg-opacity-90 py-20 px-6"
+    data-aos="fade"
+  >
+    <div class="max-w-lg mx-auto text-center">
       <h2 class="text-3xl font-bold text-dark mb-6">Minimum PC Requirements</h2>
-      <div class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast inline-block text-left">
-        <ul class="space-y-3">
+      <div class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast">
+        <ul class="space-y-4 text-left">
           <li><strong>Operating System:</strong> Windows 10 (64-bit)</li>
           <li><strong>Processor:</strong> Intel Core i5-2500K or AMD FX-6300</li>
           <li><strong>Memory:</strong> 8 GB RAM</li>
