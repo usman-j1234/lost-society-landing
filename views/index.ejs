@@ -29,18 +29,27 @@
         font-family: "Cinzel", serif;
       }
       /* Egyptian Palette */
-      .text-primary { color: #d4af37; }
-      .bg-dark     { background-color: #003b5c; }
-      .bg-sand     { background-color: #f1e9d2; }
-      .border-contrast { border-color: #b5895b; }
-      .section-offset { padding-top: 4rem; }
+      .text-primary {
+        color: #d4af37;
+      }
+      .bg-dark {
+        background-color: #003b5c;
+      }
+      .bg-sand {
+        background-color: #f1e9d2;
+      }
+      .border-contrast {
+        border-color: #b5895b;
+      }
+      .section-offset {
+        padding-top: 4rem;
+      }
       .rounded-full {
-        transition: transform 0.2s ease-in-out,
-                    box-shadow 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
       }
       .rounded-full:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       /* Pyramid section adjustments */
@@ -65,7 +74,9 @@
     <nav
       class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-dark bg-opacity-90"
     >
-      <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6"
+      >
         <a href="#hero" class="text-2xl md:text-3xl font-bold text-primary">
           Lost Society
         </a>
@@ -82,9 +93,20 @@
             >Enter Now</a
           >
         </div>
-        <button id="nav-toggle" class="md:hidden text-primary focus:outline-none">
-          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        <button
+          id="nav-toggle"
+          class="md:hidden text-primary focus:outline-none"
+        >
+          <svg
+            class="h-8 w-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
@@ -129,6 +151,25 @@
       </div>
     </section>
 
+    <!-- Trailer -->
+    <section
+      id="trailer"
+      class="py-20 px-6 bg-dark bg-opacity-80 text-center section-offset"
+      data-aos="fade-up"
+    >
+      <h2 class="text-4xl font-bold text-primary mb-8">Watch the Trailer</h2>
+      <div class="max-w-4xl mx-auto aspect-w-16 aspect-h-9">
+        <iframe
+          src="https://www.youtube.com/watch?v=kEVBSZk51R0"
+          title="Lost Society Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full rounded-lg shadow-lg"
+        ></iframe>
+      </div>
+    </section>
+
     <!-- Features -->
     <section
       id="features"
@@ -139,7 +180,10 @@
         Ancient Riddles
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-sand p-6 rounded-lg border-2 border-contrast" data-aos="zoom-in">
+        <div
+          class="bg-sand p-6 rounded-lg border-2 border-contrast"
+          data-aos="zoom-in"
+        >
           <h3 class="text-2xl font-semibold text-dark mb-2">
             Glyph Deciphering
           </h3>
@@ -213,7 +257,9 @@
         <h2 class="text-2xl font-bold text-primary mb-6">
           Ready to unravel secrets?
         </h2>
-        <form class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <form
+          class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
+        >
           <input
             type="text"
             placeholder="First name"
@@ -243,15 +289,23 @@
     </section>
 
     <!-- Requirements -->
-    <section id="requirements" class="bg-sand bg-opacity-90 py-20 px-6" data-aos="fade">
+    <section
+      id="requirements"
+      class="bg-sand bg-opacity-90 py-20 px-6"
+      data-aos="fade"
+    >
       <div class="max-w-lg mx-auto text-center">
         <h2 class="text-3xl font-bold text-dark mb-6">
           Minimum PC Requirements
         </h2>
-        <div class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast">
+        <div
+          class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast"
+        >
           <ul class="space-y-4 text-left">
             <li><strong>Operating System:</strong> Windows 10 (64-bit)</li>
-            <li><strong>Processor:</strong> Intel Core i5-2500K or AMD FX-6300</li>
+            <li>
+              <strong>Processor:</strong> Intel Core i5-2500K or AMD FX-6300
+            </li>
             <li><strong>Memory:</strong> 8 GB RAM</li>
             <li><strong>Graphics:</strong> NVIDIA GTX 760 or AMD R9 280</li>
             <li><strong>Storage:</strong> 20 GB available</li>
@@ -264,25 +318,41 @@
     <!-- Footer -->
     <footer class="py-8 text-center bg-dark bg-opacity-90 section-offset">
       <p class="text-primary mb-4">
-        &copy; <%= new Date().getFullYear() %> Lost Society Studios. All rights reserved.
+        &copy; <%= new Date().getFullYear() %> Lost Society Studios. All rights
+        reserved.
       </p>
       <div class="flex justify-center space-x-6 mb-8">
-        <a href="https://facebook.com" class="text-primary hover:text-sand text-2xl">
+        <a
+          href="https://facebook.com"
+          class="text-primary hover:text-sand text-2xl"
+        >
           <i class="bx bxl-facebook-circle"></i>
         </a>
-        <a href="https://twitter.com" class="text-primary hover:text-sand text-2xl">
+        <a
+          href="https://twitter.com"
+          class="text-primary hover:text-sand text-2xl"
+        >
           <i class="bx bxl-twitter"></i>
         </a>
-        <a href="https://instagram.com" class="text-primary hover:text-sand text-2xl">
+        <a
+          href="https://instagram.com"
+          class="text-primary hover:text-sand text-2xl"
+        >
           <i class="bx bxl-instagram"></i>
         </a>
-        <a href="https://discord.com" class="text-primary hover:text-sand text-2xl">
+        <a
+          href="https://discord.com"
+          class="text-primary hover:text-sand text-2xl"
+        >
           <i class="bx bxl-discord"></i>
         </a>
       </div>
       <div>
-        <a href="#" class="mx-2 text-primary hover:text-sand">Privacy Policy</a> |
-        <a href="#" class="mx-2 text-primary hover:text-sand">Terms of Service</a>
+        <a href="#" class="mx-2 text-primary hover:text-sand">Privacy Policy</a>
+        |
+        <a href="#" class="mx-2 text-primary hover:text-sand"
+          >Terms of Service</a
+        >
       </div>
     </footer>
 
@@ -302,19 +372,27 @@
     <script src="/js/three.js/three.min.js"></script>
     <script>
       // Canvas + renderer
-      const canvas   = document.getElementById("pyramidCanvas");
-      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      const canvas = document.getElementById("pyramidCanvas");
+      const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: true,
+        alpha: true,
+      });
       renderer.setClearColor(0x000000, 0);
       renderer.setPixelRatio(window.devicePixelRatio);
 
       // Scene & camera
-      const scene  = new THREE.Scene();
+      const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
       camera.position.set(0, 1, 3);
 
       // Pyramid mesh
-      const geo     = new THREE.ConeGeometry(1, 1.5, 4);
-      const mat     = new THREE.MeshStandardMaterial({ color: 0xd4af37, roughness: 0.3, metalness: 0.7 });
+      const geo = new THREE.ConeGeometry(1, 1.5, 4);
+      const mat = new THREE.MeshStandardMaterial({
+        color: 0xd4af37,
+        roughness: 0.3,
+        metalness: 0.7,
+      });
       const pyramid = new THREE.Mesh(geo, mat);
       pyramid.rotation.y = Math.PI / 4;
       pyramid.scale.set(1.2, 1.2, 1.2);
@@ -341,15 +419,18 @@
       // Spin logic: one-time fast spin, then settle to slow
       const baseline = 0.01;
       let speed = baseline;
-      new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            speed = 0.3;
-            // unobserve so it only happens once
-            observer.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.5 }).observe(document.getElementById("pyramid3d"));
+      new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              speed = 0.3;
+              // unobserve so it only happens once
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      ).observe(document.getElementById("pyramid3d"));
 
       // Render loop
       (function animate() {
