@@ -19,6 +19,13 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pzlupcjY6iX8Q2t1QJFnP+m8wxsh1j2L82qfv7F/V3yO0xgonAdkbQmRBKoc0oGozzHBLoaJcAdGjn6LUn6Kcw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <style>
       html {
@@ -132,11 +139,11 @@
     <!-- Hero -->
     <section
       id="hero"
-      class="relative flex flex-col items-center justify-center text-center h-screen section-offset"
+      class="relative flex items-center justify-center text-center h-screen section-offset"
       data-aos="fade"
     >
       <div class="absolute inset-0 bg-dark bg-opacity-70"></div>
-      <div class="relative z-10 px-6">
+      <div class="relative z-10 px-6 flex flex-col items-center">
         <h1 class="text-5xl md:text-6xl font-extrabold text-primary mb-4">
           Unlock the Lost Society
         </h1>
@@ -148,6 +155,22 @@
           class="px-8 py-3 border-2 border-primary text-primary hover:bg-contrast hover:text-dark rounded-full"
           >Begin Your Quest</a
         >
+
+        <!-- Platform badges, now safely below the button -->
+        <div class="mt-10 flex space-x-8">
+          <!-- Windows -->
+          <a href="#" title="Windows">
+            <i class="bx bxl-windows text-2xl text-primary"></i>
+          </a>
+          <!-- Mac -->
+          <a href="#" title="Mac">
+            <i class="bx bxl-apple text-2xl text-primary"></i>
+          </a>
+          <!-- Steam -->
+          <a href="#" title="Steam">
+            <i class="bx bxl-steam text-2xl text-primary"></i>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -158,17 +181,72 @@
       data-aos="fade-up"
     >
       <h2 class="text-4xl font-bold text-primary mb-8">Watch the Trailer</h2>
-      <div class="max-w-4xl mx-auto aspect-w-16 aspect-h-9">
+      <div class="relative max-w-3xl mx-auto cursor-pointer">
+        <a
+          href="https://youtu.be/kEVBSZk51R0"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block rounded-lg overflow-hidden shadow-lg"
+        >
+          <img
+            src="https://img.youtube.com/vi/kEVBSZk51R0/maxresdefault.jpg"
+            alt="Trailer thumbnail"
+            class="w-full"
+          />
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25"
+          >
+            <svg
+              class="w-10 h-10 text-white opacity-80 hover:opacity-100 transition"
+              fill="currentColor"
+              viewBox="0 0 64 64"
+            >
+              <circle cx="32" cy="32" r="32" opacity="0.6" />
+              <path d="M26 20l20 12-20 12V20z" fill="white" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div
+      id="trailerModal"
+      class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50"
+    >
+      <div class="relative w-11/12 max-w-4xl aspect-video">
+        <button
+          class="absolute -top-4 -right-4 text-white text-4xl"
+          onclick="closeTrailer()"
+        >
+          &times;
+        </button>
         <iframe
-          src="https://www.youtube.com/watch?v=kEVBSZk51R0"
-          title="Lost Society Trailer"
+          id="trailerIframe"
+          class="w-full h-full rounded-lg shadow-lg"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-          class="w-full h-full rounded-lg shadow-lg"
         ></iframe>
       </div>
-    </section>
+    </div>
+
+    <script>
+      function openTrailer() {
+        const modal = document.getElementById("trailerModal");
+        const iframe = document.getElementById("trailerIframe");
+        // set src with autoplay
+        iframe.src = "https://www.youtube.com/embed/kEVBSZk51R0?autoplay=1";
+        modal.classList.remove("hidden");
+      }
+      function closeTrailer() {
+        const modal = document.getElementById("trailerModal");
+        const iframe = document.getElementById("trailerIframe");
+        // clear out src to stop the video
+        iframe.src = "";
+        modal.classList.add("hidden");
+      }
+    </script>
 
     <!-- Features -->
     <section
