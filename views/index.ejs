@@ -2,35 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Lost Society</title>
 
     <!-- Tailwind CSS -->
-    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet"/>
     <!-- Ancient Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap" rel="stylesheet"/>
     <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <!-- Boxicons CSS -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 
     <style>
       /* glow animation */
       @keyframes glow {
-        0%,
-        100% {
-          text-shadow: 0 0 4px rgba(212, 175, 55, 0.6),
-            0 0 12px rgba(212, 175, 55, 0.4);
+        0%,100% {
+          text-shadow:
+            0 0 4px rgba(212,175,55,0.6),
+            0 0 12px rgba(212,175,55,0.4);
         }
         50% {
-          text-shadow: 0 0 8px rgba(212, 175, 55, 1),
-            0 0 20px rgba(212, 175, 55, 0.8);
+          text-shadow:
+            0 0 8px rgba(212,175,55,1),
+            0 0 20px rgba(212,175,55,0.8);
         }
       }
       .glow {
@@ -45,173 +40,100 @@
         font-family: "Cinzel", serif;
       }
       /* Egyptian Palette */
-      .text-primary {
-        color: #d4af37;
-      }
-      .bg-dark {
-        background-color: #003b5c;
-      }
-      .bg-sand {
-        background-color: #f1e9d2;
-      }
-      .border-contrast {
-        border-color: #b5895b;
-      }
-      .section-offset {
-        padding-top: 4rem;
-      }
+      .text-primary { color: #d4af37; }
+      .bg-dark     { background-color: #003b5c; }
+      .bg-sand     { background-color: #f1e9d2; }
+      .border-contrast { border-color: #b5895b; }
+      .section-offset { padding-top: 4rem; }
       .rounded-full {
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
       }
       .rounded-full:hover {
         transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       }
       /* Pyramid section tweaks */
-      #pyramid3d {
-        padding: 3rem 1.5rem;
-      }
-      #pyramid3d h2 {
-        margin-bottom: 1rem;
-      }
-      .canvas-container {
-        height: 40vh;
-      }
+      #pyramid3d { padding: 3rem 1.5rem; }
+      #pyramid3d h2 { margin-bottom: 1rem; }
+      .canvas-container { height: 40vh; }
     </style>
   </head>
 
-  <body
-    class="bg-fixed bg-cover bg-center"
-    style="background-image: url('/assets/textures/parchment.jpg')"
-  >
+  <body class="bg-fixed bg-cover bg-center" style="background-image: url('/assets/textures/parchment.jpg')">
     <!-- Sticky Navbar -->
-    <nav
-      class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-dark bg-opacity-90"
-    >
-      <div
-        class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6"
-      >
-        <a
-          href="#hero"
-          class="text-2xl md:text-3xl font-bold text-primary "
-        >
+    <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-dark bg-opacity-90">
+      <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+        <a href="#hero" class="text-2xl md:text-3xl font-bold text-primary">
           Lost Society
         </a>
         <div class="hidden md:flex space-x-6 items-center">
-          <a href="#features" class="text-primary hover:text-sand font-medium"
-            >Features</a
-          >
-          <a href="#gallery" class="text-primary hover:text-sand font-medium"
-            >Gallery</a
-          >
-          <a
-            href="#download"
-            class="px-4 py-2 border-2 border-contrast text-primary hover:bg-contrast rounded-full font-medium glow"
-          >
+          <a href="#features" class="text-primary hover:text-sand font-medium">Features</a>
+          <a href="#gallery"  class="text-primary hover:text-sand font-medium">Gallery</a>
+          <a href="#download"
+             class="px-4 py-2 border-2 border-contrast text-primary rounded-full font-medium glow hover:bg-contrast">
             Enter Now
           </a>
         </div>
-        <button
-          id="nav-toggle"
-          class="md:hidden text-primary focus:outline-none"
-        >
-          <svg
-            class="h-8 w-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
+        <button id="nav-toggle" class="md:hidden text-primary focus:outline-none">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
       <div id="mobile-menu" class="hidden md:hidden bg-dark bg-opacity-95">
         <div class="flex flex-col space-y-4 px-6 py-4">
-          <a href="#features" class="text-primary hover:text-sand font-medium"
-            >Features</a
-          >
-          <a href="#gallery" class="text-primary hover:text-sand font-medium"
-            >Gallery</a
-          >
-          <a
-            href="#download"
-            class="px-4 py-2 border-2 border-contrast text-primary hover:bg-contrast rounded-full font-medium"
-            >Enter Now</a
-          >
+          <a href="#features" class="text-primary hover:text-sand font-medium">Features</a>
+          <a href="#gallery"  class="text-primary hover:text-sand font-medium">Gallery</a>
+          <a href="#download" class="px-4 py-2 border-2 border-contrast text-primary rounded-full font-medium hover:bg-contrast">
+            Enter Now
+          </a>
         </div>
       </div>
     </nav>
 
     <!-- Hero -->
-    <section
-      id="hero"
-      class="relative flex items-center justify-center text-center h-screen section-offset"
-      data-aos="fade"
-    >
+    <section id="hero"
+             class="relative flex items-center justify-center text-center h-screen section-offset"
+             data-aos="fade">
       <div class="absolute inset-0 bg-dark bg-opacity-70"></div>
       <div class="relative z-10 px-6 flex flex-col items-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-primary mb-4">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-primary mb-4 glow">
           Unlock the Lost Society
         </h1>
         <p class="text-xl md:text-2xl text-primary mb-6">
           An ancient puzzle world shrouded in mystery.
         </p>
-        <a
-          href="#download"
-          class="px-8 py-3 border-2 border-primary text-primary hover:bg-contrast hover:text-dark rounded-full font-medium glow"
-          >Begin Your Quest</a 
-
-        >
-
+        <a href="#download"
+           class="px-8 py-3 border-2 border-primary text-primary rounded-full font-medium glow hover:bg-contrast">
+          Begin Your Quest
+        </a>
         <!-- Platform badges -->
         <div class="mt-10 flex space-x-8">
-          <a href="#" title="Windows">
-            <i class="bx bxl-windows text-2xl text-primary"></i>
-          </a>
-          <a href="#" title="Mac">
-            <i class="bx bxl-apple text-2xl text-primary"></i>
-          </a>
-          <a href="#" title="Steam">
-            <i class="bx bxl-steam text-2xl text-primary"></i>
-          </a>
+          <a href="#" title="Windows"><i class="bx bxl-windows text-2xl text-primary"></i></a>
+          <a href="#" title="Mac"    ><i class="bx bxl-apple   text-2xl text-primary"></i></a>
+          <a href="#" title="Steam"  ><i class="bx bxl-steam   text-2xl text-primary"></i></a>
         </div>
       </div>
     </section>
 
     <!-- Trailer -->
-    <section
-      id="trailer"
-      class="py-20 px-6 bg-dark bg-opacity-80 text-center section-offset"
-      data-aos="fade-up"
-    >
+    <section id="trailer"
+             class="py-20 px-6 bg-dark bg-opacity-80 text-center section-offset"
+             data-aos="fade-up">
       <h2 class="text-4xl font-bold text-primary mb-8">Watch the Trailer</h2>
       <div class="relative max-w-3xl mx-auto cursor-pointer">
-        <a
-          href="https://youtu.be/kEVBSZk51R0"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="block rounded-lg overflow-hidden shadow-lg"
-        >
-          <img
-            src="https://img.youtube.com/vi/kEVBSZk51R0/maxresdefault.jpg"
-            alt="Trailer thumbnail"
-            class="w-full"
-          />
-          <div
-            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25"
-          >
-            <svg
-              class="w-10 h-10 text-white opacity-80 hover:opacity-100 transition"
-              fill="currentColor"
-              viewBox="0 0 64 64"
-            >
-              <circle cx="32" cy="32" r="32" opacity="0.6" />
-              <path d="M26 20l20 12-20 12V20z" fill="white" />
+        <a href="https://youtu.be/kEVBSZk51R0"
+           target="_blank" rel="noopener noreferrer"
+           class="block rounded-lg overflow-hidden shadow-lg">
+          <img src="https://img.youtube.com/vi/kEVBSZk51R0/maxresdefault.jpg"
+               alt="Trailer thumbnail"
+               class="w-full"/>
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25">
+            <svg class="w-10 h-10 text-white opacity-80 hover:opacity-100 transition"
+                 fill="currentColor" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="32" opacity="0.6"/>
+              <path d="M26 20l20 12-20 12V20z" fill="white"/>
             </svg>
           </div>
         </a>
@@ -219,117 +141,64 @@
     </section>
 
     <!-- Features -->
-    <section
-      id="features"
-      class="scroll-mt-16 py-20 px-6 md:px-20 bg-sand bg-opacity-90 section-offset"
-      data-aos="fade"
-    >
-      <h2 class="text-4xl font-bold text-center text-dark mb-12">
-        Ancient Riddles
-      </h2>
+    <section id="features"
+             class="scroll-mt-16 py-20 px-6 md:px-20 bg-sand bg-opacity-90 section-offset"
+             data-aos="fade">
+      <h2 class="text-4xl font-bold text-center text-dark mb-12">Ancient Riddles</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          class="bg-sand p-6 rounded-lg border-2 border-contrast"
-          data-aos="zoom-in"
-        >
-          <h3 class="text-2xl font-semibold text-dark mb-2">
-            Glyph Deciphering
-          </h3>
+        <div class="bg-sand p-6 rounded-lg border-2 border-contrast" data-aos="zoom-in">
+          <h3 class="text-2xl font-semibold text-dark mb-2">Glyph Deciphering</h3>
           <p>Translate mysterious symbols to reveal hidden lore.</p>
         </div>
-        <div
-          class="bg-sand p-6 rounded-lg border-2 border-contrast"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
+        <div class="bg-sand p-6 rounded-lg border-2 border-contrast" data-aos="zoom-in" data-aos-delay="100">
           <h3 class="text-2xl font-semibold text-dark mb-2">Puzzle Chambers</h3>
           <p>Navigate intricate rooms filled with mechanical wonders.</p>
         </div>
-        <div
-          class="bg-sand p-6 rounded-lg border-2 border-contrast"
-          data-aos="zoom-in"
-          data-aos-delay="200"
-        >
-          <h3 class="text-2xl font-semibold text-dark mb-2">
-            Echoes of the Past
-          </h3>
+        <div class="bg-sand p-6 rounded-lg border-2 border-contrast" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-dark mb-2">Echoes of the Past</h3>
           <p>Unearth memories of a civilization long forgotten.</p>
         </div>
       </div>
     </section>
 
     <!-- Gallery -->
-    <section
-      id="gallery"
-      class="scroll-mt-16 py-20 px-6 md:px-20 section-offset"
-      data-aos="fade"
-    >
-      <h2 class="text-4xl font-bold text-center text-primary mb-12">
-        Ancient Vaults
-      </h2>
+    <section id="gallery"
+             class="scroll-mt-16 py-20 px-6 md:px-20 section-offset"
+             data-aos="fade">
+      <h2 class="text-4xl font-bold text-center text-primary mb-12">Ancient Vaults</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <img
-          src="/assets/screenshots/shot1.png"
-          alt="Vault 1"
-          class="rounded-lg border-2 border-contrast"
-          data-aos="fade"
-        />
-        <img
-          src="/assets/screenshots/shot3.png"
-          alt="Vault 2"
-          class="rounded-lg border-2 border-contrast"
-          data-aos="fade"
-        />
+        <img src="/assets/screenshots/shot1.png" alt="Vault 1"
+             class="rounded-lg border-2 border-contrast" data-aos="fade"/>
+        <img src="/assets/screenshots/shot3.png" alt="Vault 2"
+             class="rounded-lg border-2 border-contrast" data-aos="fade"/>
       </div>
     </section>
 
     <!-- 3D Pyramid Section -->
-    <section
-      id="pyramid3d"
-      class="px-6 md:px-10 bg-sand bg-opacity-90 section-offset"
-      data-aos="fade-up"
-    >
+    <section id="pyramid3d"
+             class="px-6 md:px-10 bg-sand bg-opacity-90 section-offset"
+             data-aos="fade-up">
       <h2 class="text-4xl font-bold text-center text-dark">Rise to the Top</h2>
       <div class="canvas-container relative w-full">
         <canvas id="pyramidCanvas" class="block w-full h-full"></canvas>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section
-      id="download"
-      class="bg-dark bg-opacity-80 text-center py-20 px-6"
-      data-aos="fade"
-    >
+    <!-- Download / Signup -->
+    <section id="download"
+             class="bg-dark bg-opacity-80 text-center py-20 px-6"
+             data-aos="fade">
       <div class="max-w-lg mx-auto">
-        <h2 class="text-2xl font-bold text-primary mb-6">
-          Ready to unravel secrets?
-        </h2>
-        <form
-          class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
-        >
-          <input
-            type="text"
-            placeholder="First name"
-            required
-            class="w-full sm:w-1/2 px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"
-          />
-          <input
-            type="text"
-            placeholder="Last name"
-            required
-            class="w-full sm:w-1/2 px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            class="w-full px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"
-          />
-          <button
-            type="submit"
-            class="self-center px-6 py-2 bg-transparent text-primary font-medium rounded-full border-2 border-contrast hover:bg-contrast hover:text-dark transition-all duration-300"
-          >
+        <h2 class="text-2xl font-bold text-primary mb-6">Ready to unravel secrets?</h2>
+        <form class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+          <input type="text" placeholder="First name" required
+                 class="w-full sm:w-1/2 px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"/>
+          <input type="text" placeholder="Last name" required
+                 class="w-full sm:w-1/2 px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"/>
+          <input type="email" placeholder="Email" required
+                 class="w-full px-4 py-2 bg-transparent text-primary placeholder-primary border-2 border-contrast rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition"/>
+          <button type="submit"
+                  class="self-center px-6 py-2 bg-transparent text-primary font-medium rounded-full border-2 border-contrast hover:bg-contrast transition-all duration-300">
             Sign Up
           </button>
         </form>
@@ -337,25 +206,19 @@
     </section>
 
     <!-- Requirements -->
-    <section
-      id="requirements"
-      class="bg-sand bg-opacity-90 py-20 px-6 section-offset"
-      data-aos="fade"
-    >
+    <section id="requirements"
+             class="bg-sand bg-opacity-90 py-20 px-6 section-offset"
+             data-aos="fade">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-dark mb-8">System Requirements</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
           <!-- Minimum -->
           <div>
             <h3 class="text-2xl font-semibold text-dark mb-4">Minimum</h3>
-            <div
-              class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast"
-            >
+            <div class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast">
               <ul class="space-y-4 text-left">
                 <li><strong>OS:</strong> Windows 10 (64-bit)</li>
-                <li>
-                  <strong>CPU:</strong> Intel Core i5-2500K or AMD FX-6300
-                </li>
+                <li><strong>CPU:</strong> Intel Core i5-2500K or AMD FX-6300</li>
                 <li><strong>RAM:</strong> 8 GB</li>
                 <li><strong>GPU:</strong> NVIDIA GTX 760 or AMD R9 280</li>
                 <li><strong>Storage:</strong> 20 GB</li>
@@ -366,14 +229,10 @@
           <!-- Recommended -->
           <div>
             <h3 class="text-2xl font-semibold text-dark mb-4">Recommended</h3>
-            <div
-              class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast"
-            >
+            <div class="bg-white bg-opacity-50 p-6 rounded-lg border-2 border-contrast">
               <ul class="space-y-4 text-left">
                 <li><strong>OS:</strong> Windows 10/11 (64-bit)</li>
-                <li>
-                  <strong>CPU:</strong> Intel Core i7-6700K or AMD Ryzen 5 3600
-                </li>
+                <li><strong>CPU:</strong> Intel Core i7-6700K or AMD Ryzen 5 3600</li>
                 <li><strong>RAM:</strong> 16 GB</li>
                 <li><strong>GPU:</strong> NVIDIA GTX 1070 or AMD RX 580</li>
                 <li><strong>Storage:</strong> 20 GB SSD</li>
@@ -387,38 +246,16 @@
 
     <!-- Footer -->
     <footer class="py-8 text-center bg-dark bg-opacity-90 section-offset">
-      <p class="text-primary mb-4">
-        &copy; <%= new Date().getFullYear() %> Lost Society Studios. All rights
-        reserved.
-      </p>
+      <p class="text-primary mb-4">&copy; <%= new Date().getFullYear() %> Lost Society Studios. All rights reserved.</p>
       <div class="flex justify-center space-x-6 mb-8">
-        <a
-          href="https://facebook.com"
-          class="text-primary hover:text-sand text-2xl"
-          ><i class="bx bxl-facebook-circle"></i
-        ></a>
-        <a
-          href="https://twitter.com"
-          class="text-primary hover:text-sand text-2xl"
-          ><i class="bx bxl-twitter"></i
-        ></a>
-        <a
-          href="https://instagram.com"
-          class="text-primary hover:text-sand text-2xl"
-          ><i class="bx bxl-instagram"></i
-        ></a>
-        <a
-          href="https://discord.com"
-          class="text-primary hover:text-sand text-2xl"
-          ><i class="bx bxl-discord"></i
-        ></a>
+        <a href="https://facebook.com" class="text-primary hover:text-sand text-2xl"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="https://twitter.com"  class="text-primary hover:text-sand text-2xl"><i class="bx bxl-twitter"></i></a>
+        <a href="https://instagram.com"class="text-primary hover:text-sand text-2xl"><i class="bx bxl-instagram"></i></a>
+        <a href="https://discord.com"  class="text-primary hover:text-sand text-2xl"><i class="bx bxl-discord"></i></a>
       </div>
       <div>
-        <a href="#" class="mx-2 text-primary hover:text-sand">Privacy Policy</a>
-        |
-        <a href="#" class="mx-2 text-primary hover:text-sand"
-          >Terms of Service</a
-        >
+        <a href="#" class="mx-2 text-primary hover:text-sand">Privacy Policy</a> |
+        <a href="#" class="mx-2 text-primary hover:text-sand">Terms of Service</a>
       </div>
     </footer>
 
@@ -426,75 +263,64 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("nav-toggle").addEventListener("click", () => {
+      document.addEventListener("DOMContentLoaded", ()=>{
+        document.getElementById("nav-toggle").addEventListener("click", ()=>{
           document.getElementById("mobile-menu").classList.toggle("hidden");
         });
-        AOS.init({ duration: 500, once: true, disable: "mobile" });
+        AOS.init({ duration:500, once:true, disable:"mobile" });
       });
     </script>
 
-    <!-- Three.js UMD & Pyramid -->
+    <!-- Three.js & Pyramid -->
     <script src="/js/three.js/three.min.js"></script>
     <script>
       const canvas = document.getElementById("pyramidCanvas");
-      const renderer = new THREE.WebGLRenderer({
-        canvas,
-        antialias: true,
-        alpha: true,
-      });
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
       renderer.setClearColor(0x000000, 0);
       renderer.setPixelRatio(window.devicePixelRatio);
 
       const scene = new THREE.Scene();
       scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 0.6));
       const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-      dirLight.position.set(5, 10, 7.5);
+      dirLight.position.set(5,10,7.5);
       scene.add(dirLight);
 
-      const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-      camera.position.set(0, 1, 3);
+      const camera = new THREE.PerspectiveCamera(45,1,0.1,100);
+      camera.position.set(0,1,3);
 
-      const geo = new THREE.ConeGeometry(1, 1.5, 4);
-      const mat = new THREE.MeshStandardMaterial({
-        color: 0xd4af37,
-        roughness: 0.3,
-        metalness: 0.7,
-      });
+      const geo = new THREE.ConeGeometry(1,1.5,4);
+      const mat = new THREE.MeshStandardMaterial({ color:0xd4af37, roughness:0.3, metalness:0.7 });
       const pyramid = new THREE.Mesh(geo, mat);
-      pyramid.rotation.y = Math.PI / 4;
-      pyramid.scale.set(1.2, 1.2, 1.2);
+      pyramid.rotation.y = Math.PI/4;
+      pyramid.scale.set(1.2,1.2,1.2);
       scene.add(pyramid);
 
-      function resize() {
-        const { clientWidth: w, clientHeight: h } = canvas.parentElement;
-        if (canvas.width !== w || canvas.height !== h) {
-          renderer.setSize(w, h);
-          camera.aspect = w / h;
+      function resize(){
+        const {clientWidth:w, clientHeight:h} = canvas.parentElement;
+        if(canvas.width!==w||canvas.height!==h){
+          renderer.setSize(w,h);
+          camera.aspect = w/h;
           camera.updateProjectionMatrix();
         }
       }
-      window.addEventListener("resize", resize);
+      window.addEventListener("resize",resize);
       resize();
 
       const baseline = 0.01;
       let speed = baseline;
-      new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              speed = 0.3;
-              obs.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.5 }
-      ).observe(document.getElementById("pyramid3d"));
+      new IntersectionObserver((entries,obs)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            speed = 0.3;
+            obs.unobserve(e.target);
+          }
+        });
+      },{threshold:0.5}).observe(document.getElementById("pyramid3d"));
 
-      (function animate() {
+      (function animate(){
         resize();
         pyramid.rotation.y += speed;
-        speed += (baseline - speed) * 0.05;
+        speed += (baseline - speed)*0.05;
         renderer.render(scene, camera);
         requestAnimationFrame(animate);
       })();
